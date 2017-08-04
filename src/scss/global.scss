@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import "variables";
+@import "mixins";
+ 
+*, *:after, *:before {
+	margin: 0;
+	padding: 0;
+	@include border-box;
+}
+body{
+	font-size: 16px;
+	font-family: $open;
+}
+     
+img {
+	width: auto;
+	max-width: 100%;
+	height: auto !important; 
+}   
+ 
+.wrapper {
+	width: 100%;
+	margin: 0 auto;
+}
+ 
+.wrapper, .row {
+	@extend %clearfix;
+}
+.row{
+	margin-left: -$gutter;
+	margin-right: -$gutter;
+}
+label{
+	padding:5px 0;
+	display: block;
+}
+input{
+	width:100%;
+	height: 30px;
+	padding:3px 5px;
+	font-family: $open;
+	margin-bottom: 5px;
+}
+button, input[type="submit"]{
+	padding:5px 20px;
+	border:2px solid $base;
+	color: $base;
+	background: none;
+	font-family: $open;
+	@include transition;
+	cursor: pointer;
+	margin-right: 5px;
+	margin-bottom: 5px;
+	&:hover{
+		background:$base;
+		color:#fff;
+	}
+	text-transform: uppercase;
+	font-weight: bold;
+}
+.t-center{
+	text-align: center;
+}
+h1{
+	font-size: 36px;
+	line-height: 40px;
+}
+.title{
+	color:$base;
+	margin:15px 0 10px;
+}
+      
+[class*='col-'] {
+	float: left;
+	padding: 1em;
+	width: 100%;
+	min-height: 1px; 
+}   
+
+@media #{$breakpoint-medium} {
+	.wrapper {      
+		width: 95%;
+		max-width: $grid-max-width;     
+	}
+	@for $i from 1 through $grid-columns {      
+		.col-#{$i} {         
+				width: 100% / $grid-columns * $i;   
+				padding: 0 $gutter;
+		}           
+	}   
+}

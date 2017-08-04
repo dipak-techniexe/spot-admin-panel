@@ -1,0 +1,40 @@
+{
+  "name": "admin-panel",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack -p --config webpack.prod.config.js",
+    "start": "webpack-dev-server --open",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "flux-standard-action": "1.2.0",
+    "react": "15.6.1",
+    "react-dom": "15.6.1",
+    "react-redux": "5.0.5",
+    "redux": "3.7.0",
+    "redux-actions": "2.0.3",
+    "redux-observable": "0.14.1",
+    "rxjs": "5.4.1",
+    "styled-components": "2.1.0"
+  },
+  "devDependencies": {
+    "@types/react": "15.0.29",
+    "@types/react-dom": "15.5.0",
+    "@types/redux-actions": "1.2.6",
+    "css-loader": "0.28.4",
+    "sass-loader": "6.0.6",
+    "source-map-loader": "0.2.1",
+    "style-loader": "0.18.2",
+    "ts-loader": "2.1.0",
+    "ts-node": "3.0.6",
+    "tslint": "5.4.3",
+    "typescript": "2.3.4",
+    "webpack": "3.0.0",
+    "webpack-dev-server": "2.4.5"
+  }
+}
